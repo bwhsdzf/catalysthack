@@ -7,14 +7,15 @@ import ThumbDown from '@material-ui/icons/ThumbDown'
 class RatingButton extends React.Component {
   render() {
     return(
-      <div>
-        <Button>
+      <div style={{float: 'right'}}>
+        <text style={{fontSize: 10}}>0 people find this helpful!</text>
+        <Button size="small">
           <ThumbUp />
         </Button>
-        <Button>
+        <Button size="small">
           <ThumbDown />
         </Button>
-      </div>g
+      </div>
     )
   }
 }

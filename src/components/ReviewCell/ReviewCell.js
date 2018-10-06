@@ -15,7 +15,7 @@ class ReviewCell extends React.Component {
         paddingTop: 8,
         paddingBottom: 8
       }}>
-        <Avatar />
+        <Avatar name = "Dave"/>
         <Rating />
         <ReviewTxt text = "Hi" />
         <HelpfulButton />
