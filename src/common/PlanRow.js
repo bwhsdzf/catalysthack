@@ -14,14 +14,15 @@ class PlanRow extends Component {
 
     autoBind(this);
     this.state = {
-      subjects:[1],
+      subjects:this.props.subjects,
+      n:0,
     }
   }
-  
+
   handleAddSubject(){
-    let n = this.state.subjects[this.state.subjects.length-1];
-    this.props.handleAddRow(n+1);
+    
   }
+
 
   render(){
     return(

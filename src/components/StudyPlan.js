@@ -11,8 +11,8 @@ class Studyplan extends Component {
        autoBind(this);
 
       this.state ={
-        rows:[1],
-        n: 2,
+        rows:[[]],
+        n: 1,
       }
     }
 
@@ -30,7 +30,6 @@ class Studyplan extends Component {
       this.setState({ rows: nR });
       m = m + 1;
       this.setState({ n: m });
-
     }
     
     render() {
@@ -43,11 +42,17 @@ class Studyplan extends Component {
             direction={"row"}
             justify={"flex-start"}
           >
+          <Grid key={1} item xs = {12}>
+              <PlanRow 
+                handleAddRow={this.handleAddRow}
+                subjects = {existSubject}/>
+          </Grid>
+          
           {this.state.rows.map(value => (
             <Grid key={value} item xs = {12}>
               <PlanRow 
                 handleAddRow={this.handleAddRow}
-                subjects = {existSubject}/>
+                subjects = {[]}/>
             </Grid>
             ))}
           <Button variant="contained" color="primary" onClick = {this.handleAddRow}>
