@@ -3,6 +3,7 @@ import autoBind from 'auto-bind';
 import Grid from '@material-ui/core/Grid';
 import PlanRow from '../common/PlanRow';
 import Button from '@material-ui/core/Button';
+import { Panel, Row, Col } from 'react-bootstrap';
 
 let existSubject = [1,2,3];
 class Studyplan extends Component {
@@ -35,21 +36,32 @@ class Studyplan extends Component {
     render() {
       return (
         <div>
+          <Row>
+          <Panel bsStyle="primary" style = {{
+            width: 1200,
+            position: "absulote",
+            left:50,
+          }} >
+          <Panel.Heading>
+            <Panel.Title componentClass="h3">Study Plan</Panel.Title>
+          </Panel.Heading>
+          <Panel.Body>
+          <Row>
           <Grid
             container
             spacing={16}
-            alignItems={"center"}
-            direction={"row"}
-            justify={"flex-start"}
+            alignItems={"flex-start"}
+            direction={"column"}
+            justify={"space-around"}
           >
-          <Grid key={1} item xs = {12}>
+          <Grid key={1} item lg = {12}>
               <PlanRow 
                 handleAddRow={this.handleAddRow}
                 subjects = {existSubject}/>
           </Grid>
           
           {this.state.rows.map(value => (
-            <Grid key={value} item xs = {12}>
+            <Grid key={value} item lg = {12}>
               <PlanRow 
                 handleAddRow={this.handleAddRow}
                 subjects = {[]}/>
@@ -59,6 +71,10 @@ class Studyplan extends Component {
             Primary
           </Button>
           </Grid>
+          </Row>
+        </Panel.Body>
+        </Panel>
+        </Row>
       </div>
     );
   }
