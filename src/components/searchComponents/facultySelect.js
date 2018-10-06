@@ -39,21 +39,22 @@ const MenuProps = {
   },
 };
 
-// Subject semesters
-const semesters = [
-  'Semester 1',
-  'Semester 2',
-  'Summer',
-  'Winter',
+// Subject faculties
+const faculties = [
+  'Arts',
+  'Science',
+  'Commerce',
+  'Education',
+  'Engineering'
 ];
 
-class SemesterSelect extends React.Component {
+class FacultySelect extends React.Component {
   state = {
-    semester: [],
+    faculty: [],
   };
 
   handleChange = event => {
-    this.setState({ semester: event.target.value });
+    this.setState({ faculty: event.target.value });
   };
 
   render() {
@@ -61,19 +62,19 @@ class SemesterSelect extends React.Component {
 
     return (
       <FormControl className={classes.formControl}>
-        <InputLabel htmlFor="select-multiple-checkbox">Availability</InputLabel>
+        <InputLabel htmlFor="select-multiple-checkbox">Faculty</InputLabel>
         <Select
           multiple
-          value={this.state.semester}
+          value={this.state.faculty}
           onChange={this.handleChange}
-          input={<Input id="select-multiple-semester-checkbox" />}
+          input={<Input id="select-multiple-faculty-checkbox" />}
           renderValue={selected => selected.join(', ')}
           MenuProps={MenuProps}
         >
-          {semesters.map(semester => (
-            <MenuItem key={semester} value={semester}>
-              <Checkbox checked={this.state.semester.indexOf(semester) > -1} />
-              <ListItemText primary={semester} />
+          {faculties.map(item => (
+            <MenuItem key={item} value={item}>
+              <Checkbox checked={this.state.faculty.indexOf(item) > -1} />
+              <ListItemText primary={item} />
             </MenuItem>
           ))}
         </Select>
@@ -82,9 +83,9 @@ class SemesterSelect extends React.Component {
   }
 }
 
-SemesterSelect.propTypes = {
+FacultySelect.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(SemesterSelect);
-// export default SemesterSelect;
+export default withStyles(styles)(FacultySelect);
+// export default FacultySelect;
