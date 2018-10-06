@@ -8,7 +8,13 @@ import CardContent from '@material-ui/core/CardContent';
 class SearchListItem extends Component {
   render() {
     // unpack the properties object
-    const {subjectName, subjectCode, subjectDescription} = this.props
+    const {
+      subjectName,
+      subjectCode,
+      subjectDescription,
+      subjectRating
+    } = this.props.subject;
+    console.log(this.props);
 
     return (
       <Card className={"classes.card"}>
@@ -34,7 +40,7 @@ class SearchListItem extends Component {
             </Typography> */}
             </Grid>
             <Grid item key={"post.rating"} xs={4} md={4}>
-              <p>Rating 4/5</p>
+              <p>Rating {subjectRating}/5</p>
             </Grid>
             </Grid>
           </CardContent>
@@ -46,9 +52,12 @@ class SearchListItem extends Component {
 
 // if properties not passed
 SearchListItem.defaultProps = {
-  subjectName: "Advanced Computing",
-  subjectCode: "COMPX000Y",
-  subjectDescription: "The subject where you'll learn everything."
+  subject: {
+    subjectName: "Advanced Computing",
+    subjectCode: "COMPX000Y",
+    subjectDescription: "The subject where you'll learn everything.",
+    subjectRating: 4
+  }
 };
 
 export default SearchListItem;

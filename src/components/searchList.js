@@ -17,12 +17,10 @@ class SearchList extends Component {
 
     return (
       <Grid item key={"post.title"} xs={12} md={12}>
-        {subjects.map(item => (
+        {subjects.map(subject => (
           <SearchListItem
-              subjectName={item.subjectName}
-              subjectCode={item.subjectCode}
-              subjectDescription={item.subjectDescription}
-              key={item.subjectCode}></SearchListItem>
+              subject={subject}
+              key={subject.subjectCode}></SearchListItem>
         ))}
       </Grid>
     )
@@ -36,18 +34,27 @@ SearchList.defaultProps = {
     {
       subjectName: "Advanced Computing",
       subjectCode: "COMP9000Y",
-      subjectDescription: "The subject where you'll learn everything."
+      subjectDescription: "The subject where you'll learn everything you didn't learn in undergraduate.",
+      subjectRating: 3.5
     },
     {
       subjectName: "Foundations of Computing",
       subjectCode: "COMP10001",
-      subjectDescription: "The best computing subject."
+      subjectDescription: "The best computing subject.",
+      subjectRating: 4.5
     },
     {
       subjectName: "Foundations of Algorithms",
       subjectCode: "COMP10002",
-      subjectDescription: "Program in C with malloc and free."
+      subjectDescription: "Program in C with malloc and free.",
+      subjectRating: 4
     },
+    {
+      subjectName: "Software Modelling and Design",
+      subjectCode: "SWEN30006",
+      subjectDescription: "Design patterns and UML diagrams.",
+      subjectRating: 3
+    }
   ]
 };
 
