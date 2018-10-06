@@ -7,6 +7,7 @@ import TextField from '@material-ui/core/TextField';
 
 import Button from '@material-ui/core/Button';
 
+import SearchInput from './searchInput';
 import LevelSelect from './levelSelect';
 import SemesterSelect from './semesterSelect';
 import SearchList from './searchList';
@@ -21,15 +22,8 @@ class SubjectSearchForm extends Component {
     return (
       <div>
         <Grid container spacing={24}>
-          <Grid item xs={12} md={6}>
-            <TextField
-              id="search"
-              name="search"
-              label="Search"
-              fullWidth
-            />
-          </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={12}>
+            <SearchInput></SearchInput>
             <LevelSelect
                 inputId={"subject-level-simple"}
                 inputValues={[1, 2, 3, 9]}
