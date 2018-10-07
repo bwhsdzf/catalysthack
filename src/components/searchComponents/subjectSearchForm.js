@@ -162,6 +162,34 @@ const subjectsListAll = [
     subjectDescription: "Will develop the students' understanding of the engineering method and the importance of engineering in society.",
     subjectRating: 3.5,
     availability: [0, 2]
+  },
+  {
+    subjectName: "Computer Systems",
+    subjectCode: "COMP30023",
+    subjectDescription: "Networks, processes and things that should have been taught in first year.",
+    subjectRating: 4,
+    availability: [1]
+  },
+  {
+    subjectName: "Database Systems",
+    subjectCode: "INFO20003",
+    subjectDescription: "Relational databases, MySQL.",
+    subjectRating: 3,
+    availability: [1, 2]
+  },
+  {
+    subjectName: "Artificial Intelligence",
+    subjectCode: "COMP30024",
+    subjectDescription: "Graph search. Before machine learning.",
+    subjectRating: 4,
+    availability: [1]
+  },
+  {
+    subjectName: "IT Project",
+    subjectCode: "COMP30022",
+    subjectDescription: "Get thrown into the deep end. Capstone for computing.",
+    subjectRating: 3,
+    availability: [2]
   }
 ];
 
