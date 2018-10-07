@@ -19,17 +19,13 @@ class PlanRow extends Component {
     }
   }
 
-  handleAddSubject(){
-
-  }
-
 
   render(){
     return(
       <div>
         <Grid
             container
-            spacing={40}
+            spacing={16}
             alignItems={"baseline"}
             direction={"row"}
             justify={"space-evenly"}
@@ -37,14 +33,12 @@ class PlanRow extends Component {
           <Grid item xs = {2}>
               Semester: 
           </Grid>
-          {this.props.subjects.map(value => (
-            <Grid key={value} item xs = {2}>
-              <Button variant="contained" color="secondary">
-              Primary
-              </Button>
+          {this.state.subjects.map(value => (
+            <Grid key={value} item xs = {3}>
+              <PlanSubject major = {value}/>
             </Grid>
             ))}
-            <Grid item alignItems={"center"} xs = {2}>
+            <Grid item xs = {1}>
               <Button variant="contained" color="primary">
                 Add New
               </Button>

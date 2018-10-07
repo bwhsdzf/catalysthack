@@ -5,7 +5,7 @@ import PlanRow from '../common/PlanRow';
 import Button from '@material-ui/core/Button';
 import { Panel, Row, Col } from 'react-bootstrap';
 
-let existSubject = [1,2,3];
+let existSubject1 = ["major","elective","breadth"];
 class Studyplan extends Component {
     constructor(props) {
       super(props);
@@ -38,9 +38,7 @@ class Studyplan extends Component {
         <div>
           <Row>
           <Panel bsStyle="primary" style = {{
-            width: 1200,
-            position: "absulote",
-            left:50,
+            width: 1250
           }} >
           <Panel.Heading>
             <Panel.Title componentClass="h3">Study Plan</Panel.Title>
@@ -57,9 +55,8 @@ class Studyplan extends Component {
           <Grid key={1} item lg = {12}>
               <PlanRow 
                 handleAddRow={this.handleAddRow}
-                subjects = {existSubject}/>
+                subjects = {existSubject1}/>
           </Grid>
-          
           {this.state.rows.map(value => (
             <Grid key={value} item lg = {12}>
               <PlanRow 
@@ -68,7 +65,7 @@ class Studyplan extends Component {
             </Grid>
             ))}
           <Button variant="contained" color="primary" onClick = {this.handleAddRow}>
-            Primary
+            New Semester
           </Button>
           </Grid>
           </Row>

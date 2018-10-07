@@ -5,6 +5,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
+import Typography from '@material-ui/core/Typography';
 
 const styles = theme => ({
   root: {
@@ -19,8 +20,12 @@ function ListDividers(props) {
   return (
     <div className={classes.root}>
       <List component="nav" style = {{
-          width: 400,
+          width: 200,
       }}>
+      <Typography component="p">
+          Recommendation for Today
+        </Typography>
+        <Divider />
         <ListItem button>
           <ListItemText primary="Inbox" />
         </ListItem>
