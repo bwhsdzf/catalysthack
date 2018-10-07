@@ -23,27 +23,24 @@ class PlanRow extends Component {
   render(){
     return(
       <div>
-        <Grid
-            container
-            spacing={16}
-            alignItems={"baseline"}
-            direction={"row"}
-            justify={"space-evenly"}
-          >
-          <Grid item xs = {2}>
+        <div style={{
+            width: '100%',
+            display: 'flex',
+          }}>
+          <div style={{ padding: 20 }}>
               Semester: 
-          </Grid>
+          </div>
           {this.state.subjects.map(value => (
-            <Grid key={value} item xs = {3}>
+            <div style={{ padding: 6 }}>
               <PlanSubject major = {value}/>
-            </Grid>
+            </div>
             ))}
-            <Grid item xs = {1}>
+            <div style={{ padding: 10 }}>
               <Button variant="contained" color="primary">
                 Add New
               </Button>
-            </Grid>
-          </Grid>
+            </div>
+          </div>
       </div>
     )
   }

@@ -1,22 +1,26 @@
 import React from 'react'
-import { Typography, IconButton } from '@material-ui/core';
+import { Typography, Button } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/AddBox'
 
 class BookmarkCell extends React.Component {
     render() {
+        const { text } = this.props
+
         return(
-            <div style={{
-                display: 'flex',
-            }}>
-                <text style={{justifyContent: 'center'}}>
-                    Hello
+            <div>
+                <text style={{
+                    verticalAlign: '-webkit-baseline-middle', 
+                    fontWeight: 'bold',
+                }}>
+                    { text }
                 </text>
-                <IconButton style={{alignItems: 'left'}}>
+                <Button style={{float: 'right'}}>
                     <AddIcon/>
-                </IconButton>
+                </Button>
             </div>
         )
     }
 }
+  
 
 export default BookmarkCell

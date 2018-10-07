@@ -2,14 +2,14 @@ import React from 'react'
 import AppBar from '@material-ui/core/AppBar';
 import Typography from '@material-ui/core/Typography';
 
-class BookmarkHeader extends React.Component {
+class TableHeader extends React.Component {
     render() {
         return(
                 <AppBar style={{
                             height: 40,
                             display: 'flex',
                             justifyContent: 'center',
-                            position: 'inherit'
+                            position: 'inherit',
                         }}>
                         <Typography variant="title" style={{
                             color: 'white',
@@ -22,4 +22,4 @@ class BookmarkHeader extends React.Component {
     }
 }
 
-export default BookmarkHeader
+export default TableHeader

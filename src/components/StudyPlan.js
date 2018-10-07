@@ -52,17 +52,17 @@ class Studyplan extends Component {
             direction={"column"}
             justify={"space-around"}
           >
-          <Grid key={1} item lg = {12}>
+          <div>
               <PlanRow 
                 handleAddRow={this.handleAddRow}
                 subjects = {existSubject1}/>
-          </Grid>
+          </div>
           {this.state.rows.map(value => (
-            <Grid key={value} item lg = {12}>
+            <div>
               <PlanRow 
                 handleAddRow={this.handleAddRow}
                 subjects = {[]}/>
-            </Grid>
+            </div>
             ))}
           <Button variant="contained" color="primary" onClick = {this.handleAddRow}>
             New Semester

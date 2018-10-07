@@ -6,6 +6,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
+import autoBind from 'auto-bind';
 
 const styles = theme => ({
   root: {
@@ -15,34 +16,40 @@ const styles = theme => ({
   },
 });
 
-function ListDividers(props) {
-  const { classes } = props;
+class ListDividers extends React.Component {
+  constructor(props){
+    super(props);
+    autoBind(this);
+  }
+    
+  render(){
   return (
-    <div className={classes.root}>
+    <div >
       <List component="nav" style = {{
           width: 200,
       }}>
       <Typography component="p">
-          Recommendation for Today
+          {this.props.title}
         </Typography>
         <Divider />
         <ListItem button>
-          <ListItemText primary="Inbox" />
+          <ListItemText primary={this.props.op1} />
         </ListItem>
         <Divider />
         <ListItem button divider>
-          <ListItemText primary="Drafts" />
+          <ListItemText primary={this.props.op2} />
         </ListItem>
         <ListItem button>
-          <ListItemText primary="Trash" />
+          <ListItemText primary={this.props.op3} />
         </ListItem>
         <Divider light />
         <ListItem button>
-          <ListItemText primary="Spam" />
+          <ListItemText primary={this.props.op4} />
         </ListItem>
       </List>
     </div>
   );
+    }
 }
 
 ListDividers.propTypes = {
