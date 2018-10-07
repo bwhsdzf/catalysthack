@@ -20,11 +20,11 @@ const styles = theme => ({
   },
 });
 
-// For selecting the subject level
+// For selecting what to sort by
 // pass in a prop with the id, the name, and the
-class LevelSelect extends React.Component {
+class SortBySelect extends React.Component {
   state = {
-    level: '',  // subject level
+    sortby: '',  // thing to sort by
   };
 
   handleChange = event => {
@@ -32,22 +32,22 @@ class LevelSelect extends React.Component {
   };
 
   render() {
-    const { inputId, inputValues, classes } = this.props;
+    const { inputValues, classes } = this.props;
 
     return (
       <FormControl className={classes.formControl}>
-        <InputLabel shrink htmlFor={inputId} >Level</InputLabel>
+        <InputLabel shrink htmlFor="sort-by-select">Sort by</InputLabel>
         <Select
-          name="level"
-          value={this.state.level}
+          name="sortby"
+          value={this.state.sortby}
           onChange={this.handleChange}
           inputProps={{
-            name: "level",   // "value" needs to be the same as this.state."value"
-            id: inputId,
+            name: "sortby",   // "value" needs to be the same as this.state."value"
+            id: "sort-by-select",
           }}
           displayEmpty>
           {/* Default value if empty*/}
-          <MenuItem value={""} key={"None"}><em>Any</em></MenuItem>
+          <MenuItem value={""} key={"None"}><em>None</em></MenuItem>
           {inputValues.map(value => (
             <MenuItem value={value} key={value}>{value}</MenuItem>
           ))}
@@ -57,15 +57,12 @@ class LevelSelect extends React.Component {
   }
 }
 
-LevelSelect.propTypes = {
+SortBySelect.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-LevelSelect.defaultProps = {
-  inputId: "",  // id replace this with something unique. Same id for InputLabel and Select
+SortBySelect.defaultProps = {
   inputValues: [1, 2, 3],
 };
 
-// export default LevelSelect;
-export default withStyles(styles)(LevelSelect);
-
+export default withStyles(styles)(SortBySelect);
