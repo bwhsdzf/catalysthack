@@ -16,15 +16,14 @@ class ReviewCell extends React.Component {
 
     return (
       <div style={{
-        paddingLeft: 8,
-        paddingRight: 8,
-        paddingTop: 8,
-        paddingBottom: 8
+        padding: 8,
       }}>
         <Avatar name = {name}/>
         <Rating rating={rating}/>
         <ReviewTxt text = {text} />
-        <HelpfulButton />
+        <span style={{textAlign: 'right'}}>
+          <HelpfulButton />
+        </span>
       </div>
     )
   }

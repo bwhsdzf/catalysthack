@@ -22,7 +22,7 @@ class RatingButton extends React.Component {
 
   render() {
     return(
-      <div style={{float: 'right'}}>
+      <div>
         <text style={{fontSize: 10}}>{this.state.clicks} people find this helpful!</text>
         <Button onClick={this.IncrementItem} size="small">
           <ThumbUp />
