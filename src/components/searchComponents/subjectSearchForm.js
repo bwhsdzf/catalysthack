@@ -212,7 +212,7 @@ const subjectsListAll = [
     subjectName: "IT Project",
     subjectCode: "COMP30022",
     subjectDescription: "Get thrown into the deep end. Capstone for computing.",
-    subjectRating: 3,
+    subjectRating: 2.5,
     availability: [2]
   }
 ];

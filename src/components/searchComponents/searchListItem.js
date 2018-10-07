@@ -3,6 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import BookmarkIcon from '@material-ui/icons/Bookmark';
 
 
 class SearchListItem extends Component {
@@ -40,6 +41,7 @@ class SearchListItem extends Component {
             </Grid>
             <Grid item key={"post.rating"} xs={4} md={4}>
               <p>Rating {subjectRating}/5</p>
+              <p><BookmarkIcon></BookmarkIcon></p>
             </Grid>
             </Grid>
           </CardContent>
