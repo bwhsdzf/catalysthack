@@ -8,6 +8,12 @@ import HelpfulButton from './HelpfulButton';
 
 class ReviewCell extends React.Component {
   render() {
+    const {
+      name,
+      text,
+      rating,
+    } = this.props
+
     return (
       <div style={{
         paddingLeft: 8,
@@ -15,9 +21,9 @@ class ReviewCell extends React.Component {
         paddingTop: 8,
         paddingBottom: 8
       }}>
-        <Avatar name = "Dave"/>
-        <Rating />
-        <ReviewTxt text = "Hi" />
+        <Avatar name = {name}/>
+        <Rating rating={rating}/>
+        <ReviewTxt text = {text} />
         <HelpfulButton />
       </div>
     )
