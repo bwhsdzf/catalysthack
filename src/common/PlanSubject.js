@@ -2,21 +2,21 @@ import React, { Component } from 'react';
 import autoBind from 'auto-bind';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import ColorBar from 'react-color-bar';
+
 
 const data = [
   {
       color: '#21bbce',
   }
 ];
-class PlanRow extends Component {
+class PlanSubject extends Component {
     constructor(props){
         super(props);
+        
         this.state = {
           major: this.props.major,
         }
@@ -63,13 +63,11 @@ class PlanRow extends Component {
     render(){
       return(
         <div>
-          {this.renderColorBand()}
           <Card style = {{
             maxWidth: "500"
           }}>
-          
           <CardActionArea>
-          {/* {this.renderColorBand()} */}
+          {this.renderColorBand()}
       <CardContent>
         <Typography color="textSecondary">
           MELU10001
@@ -78,12 +76,12 @@ class PlanRow extends Component {
           Sample Subject
         </Typography>
         <Typography component="p">
-          Some introduction
+          Faculty
         </Typography>
       </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small">Read Reviews</Button>
+        <Button size="small" onClick = {this.props.toSubject}>Read Reviews</Button>
       </CardActions>
     </Card>
         </div>
@@ -94,4 +92,4 @@ class PlanRow extends Component {
 
 }
 
-export default PlanRow;
+export default PlanSubject;

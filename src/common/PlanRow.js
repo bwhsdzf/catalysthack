@@ -32,7 +32,9 @@ class PlanRow extends Component {
           </div>
           {this.state.subjects.map(value => (
             <div style={{ padding: 6 }}>
-              <PlanSubject major = {value}/>
+              <PlanSubject major = {value}
+              toSubject = {this.props.toSubject}
+              />
             </div>
             ))}
             <div style={{ padding: 10 }}>

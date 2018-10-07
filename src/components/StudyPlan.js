@@ -54,12 +54,14 @@ class Studyplan extends Component {
           >
           <div>
               <PlanRow 
+                toSubject = {this.props.toSubject}
                 handleAddRow={this.handleAddRow}
                 subjects = {existSubject1}/>
           </div>
           {this.state.rows.map(value => (
             <div>
               <PlanRow 
+                toSubject = {this.props.toSubject}
                 handleAddRow={this.handleAddRow}
                 subjects = {[]}/>
             </div>
