@@ -16,8 +16,8 @@ const styles = theme => ({
   },
   formControl: {
     margin: theme.spacing.unit,
-    minWidth: 120,
-    maxWidth: 300,
+    minWidth: 150,
+    maxWidth: 350,
   },
   chips: {
     display: 'flex',
@@ -34,19 +34,23 @@ const MenuProps = {
   PaperProps: {
     style: {
       maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 250,
+      width: 300,
     },
   },
 };
 
+
+// But this is copied from subjectSearchForm. Must make it the same
+const SCIENCE = "Science";
+const ARTS = "Arts"
+const BUSINESS = "Business and Economics";
+const FINE_ARTS = "Fine Arts and Music";
 // Subject faculties
 const faculties = [
-  'Arts',
-  'Science',
-  'Commerce',
-  'Design',
-  'Education',
-  'Engineering'
+  ARTS,
+  SCIENCE,
+  BUSINESS,
+  FINE_ARTS,
 ];
 
 class FacultySelect extends React.Component {
