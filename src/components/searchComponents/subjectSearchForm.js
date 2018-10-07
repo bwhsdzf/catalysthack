@@ -12,6 +12,7 @@ import LevelSelect from './levelSelect';
 import SemesterSelect from './semesterSelect';
 import SearchList from './searchList';
 import FacultySelect from './facultySelect';
+import SortBySelect from './sortBySelect';
 
 
 class SubjectSearchForm extends Component {
@@ -44,6 +45,7 @@ class SubjectSearchForm extends Component {
                   ></LevelSelect>
               <SemesterSelect></SemesterSelect>
               <FacultySelect></FacultySelect>
+              <SortBySelect inputValues={["Rating"]}></SortBySelect>
             </Grid>
             <Grid item xs={12} md={6}>
               <Button
@@ -73,14 +75,11 @@ class SubjectSearchForm extends Component {
     e.preventDefault();
     console.log("Sumbitted the subject search");
     const searchQuery = e.target.elements.search.value;
-    console.log("Search query:", searchQuery);
-
     const level = e.target.elements.level.value;
-    console.log("Level:", e.target.elements.level.value);
     const availability = e.target.elements.availability.value;
-    console.log("Availability:", availability);
     console.log("Faculty:", e.target.elements.faculty.value);
 
+    const sortby = e.target.elements.sortby.value;
     let filtered = subjectsListAll;
     // Filter by search query
     if (searchQuery && searchQuery !== "") {
@@ -108,6 +107,31 @@ class SubjectSearchForm extends Component {
           }
         }
         return false;
+      });
+    }
+    // Apply the sort
+    if (sortby === "") {
+      // sort alphabetically
+      filtered.sort((subjectA, subjectB) => {
+        // should both be ints
+        const nameA = subjectA.subjectCode;
+        const nameB = subjectB.subjectCode;
+        // Compare the two ratings
+        if(nameA < nameB) return -1;
+        if(nameA > nameB) return 1;
+        return 0;
+      });
+    }
+    if (sortby === "Rating") {
+      // sort ascending in place
+      filtered.sort((subjectA, subjectB) => {
+        // should both be ints
+        const ratingA = subjectA.subjectRating;
+        const ratingB = subjectB.subjectRating;
+        // Compare the two ratings
+        if(ratingA < ratingB) return 1;
+        if(ratingA > ratingB) return -1;
+        return 0;
       });
     }
     console.log(filtered)
