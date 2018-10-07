@@ -38,6 +38,7 @@ class LevelSelect extends React.Component {
       <FormControl className={classes.formControl}>
         <InputLabel shrink htmlFor={inputId} >Level</InputLabel>
         <Select
+          name="level"
           value={this.state.level}
           onChange={this.handleChange}
           inputProps={{

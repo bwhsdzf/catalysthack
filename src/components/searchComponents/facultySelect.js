@@ -44,6 +44,7 @@ const faculties = [
   'Arts',
   'Science',
   'Commerce',
+  'Design',
   'Education',
   'Engineering'
 ];
@@ -65,6 +66,7 @@ class FacultySelect extends React.Component {
         <InputLabel htmlFor="select-multiple-checkbox">Faculty</InputLabel>
         <Select
           multiple
+          name="faculty"
           value={this.state.faculty}
           onChange={this.handleChange}
           input={<Input id="select-multiple-faculty-checkbox" />}

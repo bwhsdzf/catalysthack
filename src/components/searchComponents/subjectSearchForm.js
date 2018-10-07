@@ -21,37 +21,48 @@ class SubjectSearchForm extends Component {
 
     return (
       <div>
-        <Grid container spacing={24}>
-          <Grid item xs={12} md={12}>
-            <SearchInput></SearchInput>
-            <LevelSelect
-                inputId={"subject-level-simple"}
-                inputValues={[1, 2, 3, 9]}
-                ></LevelSelect>
-            <SemesterSelect></SemesterSelect>
-            <FacultySelect></FacultySelect>
+        <form onSubmit={this.onFormSubmit}>
+          <Grid container spacing={24}>
+            <Grid item xs={12} md={12}>
+              <SearchInput></SearchInput>
+              <LevelSelect
+                  inputId={"subject-level-simple"}
+                  inputValues={[1, 2, 3, 9]}
+                  ></LevelSelect>
+              <SemesterSelect></SemesterSelect>
+              <FacultySelect></FacultySelect>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Button
+                  type="submit"
+                  fullWidth
+                  variant="raised"
+                  color="primary"
+                  className={"classes.submit"}
+                  >
+                Search
+              </Button>
+            </Grid>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <Button
-                type="submit"
-                fullWidth
-                variant="raised"
-                color="primary"
-                className={"classes.submit"}
-                >
-              Search
-            </Button>
-          </Grid>
-        </Grid>
-        <br/>
-        {/* Search results */}
-        <Typography variant="headline" color="textSecondary"
-                style={{textAlign:"left"}}>
-              Search Results
-        </Typography>
+          <br/>
+          {/* Search results */}
+          <Typography variant="headline" color="textSecondary"
+                  style={{textAlign:"left"}}>
+                Search Results
+          </Typography>
+        </form>
         <SearchList></SearchList>
       </div>
     )
+  }
+
+  onFormSubmit(e) {
+    e.preventDefault();
+    console.log("Sumbitted the subject search");
+    console.log("Search query:", e.target.elements.search.value);
+    console.log("Availability:", e.target.elements.availability.value);
+    console.log("Level:", e.target.elements.level.value);
+    console.log("Faculty:", e.target.elements.faculty.value);
   }
 }
 

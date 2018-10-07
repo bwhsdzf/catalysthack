@@ -64,6 +64,7 @@ class SemesterSelect extends React.Component {
         <InputLabel htmlFor="select-multiple-checkbox">Availability</InputLabel>
         <Select
           multiple
+          name="availability"
           value={this.state.semester}
           onChange={this.handleChange}
           input={<Input id="select-multiple-semester-checkbox" />}
