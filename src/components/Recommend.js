@@ -33,18 +33,22 @@ class ListDividers extends React.Component {
         </Typography>
         <Divider />
         <ListItem button>
-          <ListItemText primary={this.props.op1} />
+          <ListItemText primary={this.props.op1}
+          onClick = {this.props.toSubject} />
         </ListItem>
         <Divider />
         <ListItem button divider>
-          <ListItemText primary={this.props.op2} />
+          <ListItemText primary={this.props.op2} 
+          onClick = {this.props.toSubject}/>
         </ListItem>
         <ListItem button>
-          <ListItemText primary={this.props.op3} />
+          <ListItemText primary={this.props.op3} 
+          onClick = {this.props.toSubject}/>
         </ListItem>
         <Divider light />
         <ListItem button>
-          <ListItemText primary={this.props.op4} />
+          <ListItemText primary={this.props.op4}
+          onClick = {this.props.toSubject} />
         </ListItem>
       </List>
     </div>

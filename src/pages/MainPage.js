@@ -29,6 +29,7 @@ class MainPage extends Component {
             op3 = {"Recommend Subject 3"}
             op4 = {"Recommend Subject 4"}/>
             <ListDivider root = 'root' 
+            toSubject = {this.props.toSubject}
             title = {"Bookmarks"}
             op1 = {"Bookmarked Subject 1"}
             op2 = {"Bookmarked Subject 2"}

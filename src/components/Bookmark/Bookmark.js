@@ -9,11 +9,8 @@ class Bookmark extends React.Component {
         return(
             <div>
                 <BookmarkHeader/>
-                <div style={{
-                    padding: 4,
-                }}>
-                    <BookmarkCell text = { cellText }/>
-                </div> 
+                <BookmarkCell text = { cellText }/>
+                <BookmarkCell text = { cellText }/>
             </div>
         )
     }

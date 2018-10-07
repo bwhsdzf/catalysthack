@@ -3,6 +3,7 @@ import autoBind from 'auto-bind';
 import Typography from '@material-ui/core/Typography';
 import { Button } from 'react-bootstrap';
 import PlanSubject from '../common/PlanSubject';
+import ReviewTable from '../components/ReviewCell/ReviewTable';
 
 
 class SubjectPage extends Component {
@@ -95,6 +96,7 @@ class SubjectPage extends Component {
         <PlanSubject major='elective' />
         </div>
         </div>
+        <ReviewTable />
         </div>
         );
   }

@@ -4,6 +4,7 @@ import Header from './components/Header';
 import MainPage from './pages/MainPage';
 import SubjectPage from './pages/SubjectPage';
 import SearchPage from './pages/SearchPage';
+import BookmarkPage from './components/Bookmark/BookmarkPage';
 import autoBind from 'auto-bind';
 
 
@@ -12,7 +13,7 @@ class App extends Component {
     super(props);
     autoBind(this);
     this.state = {
-      page: 'search',
+      page: 'bookmark',
     }
   }
 
@@ -66,6 +67,17 @@ class App extends Component {
             toSearchPage = {this.toSearchPage}
             />
             <SearchPage />
+          </div>
+        );
+        case 'bookmark':
+        return (
+          <div>
+            <Header 
+            toBookMark = {this.toBookMark}
+            toHome = {this.toHome}
+            toSearchPage = {this.toSearchPage}
+            />
+            <BookmarkPage />
           </div>
         );
       default:
