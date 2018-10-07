@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from '../header'
 import BookmarkCell from './BookmarkCell';
 
 class BookmarkPage extends React.Component {
@@ -11,8 +10,8 @@ class BookmarkPage extends React.Component {
         super(props);
         this.state = {
             bookmarkList: [
-                "Hello World!", 
-                'sencond'
+                "Algorithm and Data Structure", 
+                'Models of Computation'
             ]
         }
     }
@@ -29,7 +28,6 @@ class BookmarkPage extends React.Component {
     render() {
         return(
             <div>
-                <Header />
                 <div style={{
                     marginTop: 20,
                     marginLeft: 80,

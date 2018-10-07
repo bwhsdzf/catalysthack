@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import SearchListItem from './searchListItem';
+import autoBind from 'auto-bind';
 
 // Holds a list of searchListItems
 
@@ -9,6 +10,12 @@ import SearchListItem from './searchListItem';
 
 
 class SearchList extends Component {
+  
+  constructor(props){
+    super(props);
+    autoBind(this);
+  }
+
 
 
   render() {
@@ -19,6 +26,7 @@ class SearchList extends Component {
       <Grid item key={"post.title"} xs={12} md={12}>
         {subjects.map(subject => (
           <SearchListItem
+              onClick = {this.props.onClick}
               subject={subject}
               key={subject.subjectCode}></SearchListItem>
         ))}

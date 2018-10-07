@@ -68,7 +68,8 @@ class SubjectSearchForm extends Component {
                 Search Results
           </Typography>
         </form>
-        <SearchList subjects={this.state.subjectsList}></SearchList>
+        <SearchList subjects={this.state.subjectsList}
+        onClick = {this.props.toSubject}></SearchList>
       </div>
     )
   }
