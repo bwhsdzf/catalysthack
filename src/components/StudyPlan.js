@@ -5,7 +5,7 @@ import PlanRow from '../common/PlanRow';
 import Button from '@material-ui/core/Button';
 import { Panel, Row, Col } from 'react-bootstrap';
 
-let existSubject1 = ["major","elective","breadth"];
+let existSubject1 = ["major","major","elective","breadth"];
 class Studyplan extends Component {
     constructor(props) {
       super(props);
