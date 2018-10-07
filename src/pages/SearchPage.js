@@ -5,7 +5,10 @@ import SubjectSearchForm from '../components/searchComponents/subjectSearchForm'
 
 
 class SearchPage extends Component {
-
+  constructor(props){
+    super(props);
+    autoBind(this);
+  }
   
 
   render() {
@@ -13,7 +16,8 @@ class SearchPage extends Component {
         <div style = {{
             padding: 30
         }}>
-        <SubjectSearchForm />
+        <SubjectSearchForm 
+        toSubject = {this.props.toSubject}/>
         </div>
         );
   }

@@ -67,7 +67,8 @@ class App extends Component {
             toHome = {this.toHome}
             toSearchPage = {this.toSearchPage}
             />
-            <SearchPage />
+            <SearchPage 
+            toSubject = {this.toSubject}/>
           </div>
         );
         case 'bookmark':

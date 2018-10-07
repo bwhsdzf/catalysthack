@@ -10,8 +10,8 @@ class BookmarkPage extends React.Component {
         super(props);
         this.state = {
             bookmarkList: [
-                "Hello World!", 
-                'sencond'
+                "Algorithm and Data Structure", 
+                'Models of Computation'
             ]
         }
     }
