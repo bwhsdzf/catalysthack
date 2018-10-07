@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import { Panel, Row, Col } from 'react-bootstrap';
 
 let existSubject1 = ["major","major","elective","breadth"];
+let existSubject2 = ["major"];
 class Studyplan extends Component {
     constructor(props) {
       super(props);
@@ -55,13 +56,22 @@ class Studyplan extends Component {
           <div>
               <PlanRow 
                 toSubject = {this.props.toSubject}
+                toSearchPage = {this.props.toSearchPage}
                 handleAddRow={this.handleAddRow}
                 subjects = {existSubject1}/>
+          </div>
+          <div>
+              <PlanRow 
+                toSubject = {this.props.toSubject}
+                toSearchPage = {this.props.toSearchPage}
+                handleAddRow={this.handleAddRow}
+                subjects = {existSubject2}/>
           </div>
           {this.state.rows.map(value => (
             <div>
               <PlanRow 
                 toSubject = {this.props.toSubject}
+                toSearchPage = {this.props.toSearchPage}
                 handleAddRow={this.handleAddRow}
                 subjects = {[]}/>
             </div>

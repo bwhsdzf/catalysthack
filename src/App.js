@@ -13,7 +13,7 @@ class App extends Component {
     super(props);
     autoBind(this);
     this.state = {
-      page: 'bookmark',
+      page: 'main',
     }
   }
 
@@ -44,7 +44,8 @@ class App extends Component {
         toSearchPage = {this.toSearchPage}
         />
         <MainPage 
-        toSubject = {this.toSubject}/>
+        toSubject = {this.toSubject}
+        toSearchPage = {this.toSearchPage}/>
         </div>
       );
       case 'subject':

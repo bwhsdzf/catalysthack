@@ -19,7 +19,8 @@ class MainPage extends Component {
             padding: 30
         }}>
             <StudyPlan 
-            toSubject = {this.props.toSubject}/>
+            toSubject = {this.props.toSubject}
+            toSearchPage = {this.props.toSearchPage}/>
             <div>
             <ListDivider root = 'root' 
             toSubject = {this.props.toSubject}

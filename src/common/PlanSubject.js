@@ -7,12 +7,6 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import CardActionArea from '@material-ui/core/CardActionArea';
 
-
-const data = [
-  {
-      color: '#21bbce',
-  }
-];
 class PlanSubject extends Component {
     constructor(props){
         super(props);
@@ -80,6 +74,9 @@ class PlanSubject extends Component {
         </Typography>
       </CardContent>
       </CardActionArea>
+      <CardActions>
+        <Button size="small" onClick = {this.props.toSubject}>Write Reviews</Button>
+      </CardActions>
       <CardActions>
         <Button size="small" onClick = {this.props.toSubject}>Read Reviews</Button>
       </CardActions>

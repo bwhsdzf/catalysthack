@@ -38,7 +38,8 @@ class PlanRow extends Component {
             </div>
             ))}
             <div style={{ padding: 10 }}>
-              <Button variant="contained" color="primary">
+              <Button variant="contained" color="primary"
+              onClick = {this.props.toSearchPage}>
                 Add New
               </Button>
             </div>
