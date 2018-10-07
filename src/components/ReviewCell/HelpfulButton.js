@@ -5,14 +5,29 @@ import ThumbUp from '@material-ui/icons/ThumbUp';
 import ThumbDown from '@material-ui/icons/ThumbDown'
 
 class RatingButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      clicks: 0,
+    };
+  }
+
+  IncrementItem = () => {
+    this.setState({ clicks: this.state.clicks + 1 });
+  }
+
+  DecreaseItem = () => {
+    this.setState({ clicks: this.state.clicks - 1 });
+  }
+
   render() {
     return(
-      <div style={{float: 'right'}}>
-        <text style={{fontSize: 10}}>0 people find this helpful!</text>
-        <Button size="small">
+      <div>
+        <text style={{fontSize: 10}}>{this.state.clicks} people find this helpful!</text>
+        <Button onClick={this.IncrementItem} size="small">
           <ThumbUp />
         </Button>
-        <Button size="small">
+        <Button onClick={this.DecreaseItem} size="small">
           <ThumbDown />
         </Button>
       </div>
