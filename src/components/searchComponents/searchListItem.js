@@ -25,18 +25,16 @@ class SearchListItem extends Component {
       subjectRating
     } = this.props.subject;
 
-
-
     return (
-      <CardActionArea onClick = {this.props.onClick}>
       <Card className={"classes.card"} style = {{
-        width:1200,
+        width: '100%'
       }}>
         <div className={"classes.cardDetails"}>
-
           <CardContent>
             <Grid container spacing={8} className={"classes.mainGrid"}>
-            <Grid item key={"post.title"} xs={8} md={8}>
+            <Grid item key={"post.title"} xs={8} md={9}>
+            <CardActionArea onClick={this.props.onClick}
+              style={{width: '100%'}}>
             <Typography component="h2" variant="headline"
                 style={{textAlign:"left"}}>
               {subjectName}
@@ -53,18 +51,18 @@ class SearchListItem extends Component {
                 style={{textAlign:"left"}}>
               Continue reading...
             </Typography> */}
+            </CardActionArea>
             </Grid>
-            <Grid item key={"post.rating"} xs={4} md={4}>
+
+            <Grid item key={"post.rating"} xs={4} md={3}>
               <p>Rating {subjectRating}/5</p>
               <p><IconButton><BookmarkIcon></BookmarkIcon></IconButton></p>
             </Grid>
             </Grid>
           </CardContent>
-
         </div>
       </Card>
-      </CardActionArea>
-    )
+    );
   }
 }
 

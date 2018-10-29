@@ -4,10 +4,10 @@ import StarRatingComponent from 'react-star-rating-component';
 class Rating extends React.Component {
   render() {
     const {
-      rating 
-    } = this.props
+      rating
+    } = this.props;
 
-    return(
+    return (
       // <img
       //   style={{
       //     width: 100,
@@ -21,13 +21,13 @@ class Rating extends React.Component {
 
       // />
       <div>
-        <StarRatingComponent 
-          name="rate1" 
+        <StarRatingComponent
+          name="rate1"
           starCount={5}
-          value={rating}
+          value={parseFloat(rating)}
         />
       </div>
-    )
+    );
   }
 }
 

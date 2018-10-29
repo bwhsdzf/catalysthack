@@ -28,12 +28,12 @@ class BookmarkCell extends React.Component {
                 margin: 16,
                 paddingBottom: 16,
                 borderBottom: '1px solid black'}}>
-                <text style={{
+                <span style={{
                     verticalAlign: '-webkit-baseline-middle',
                     fontWeight: 'bold',
                 }}>
                     { text }
-                </text>
+                </span>
                 <Button
                     color='secondary'
                     style={{

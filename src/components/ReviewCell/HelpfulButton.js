@@ -22,7 +22,9 @@ class RatingButton extends React.Component {
   render() {
     return(
       <div>
-        <text style={{fontSize: 10}}>{this.state.clicks} people find this helpful!</text>
+        <span style={{fontSize: 10}}>
+          {this.state.clicks} people find this helpful
+        </span>
         <Button onClick={this.IncrementItem} size="small">
           <ThumbUp />
         </Button>

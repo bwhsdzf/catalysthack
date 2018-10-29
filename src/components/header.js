@@ -44,7 +44,7 @@ class Header extends Component {
             color: 'white'
           }}>Search</Button>
           <Button size="large"
-          onClick = {this.props.toBookMark}
+          onClick = {this.props.toBookmark}
           style={{
             color: 'white'
           }}>Bookmark</Button>

@@ -21,7 +21,7 @@ class App extends Component {
     this.setState({page : 'search'});
   }
 
-  toBookMark(){
+  toBookmark() {
     this.setState({page : 'bookmark'});
   }
 
@@ -39,7 +39,7 @@ class App extends Component {
       return (
         <div>
         <Header
-        toBookMark = {this.toBookMark}
+        toBookmark = {this.toBookmark}
         toHome = {this.toHome}
         toSearchPage = {this.toSearchPage}
         />
@@ -52,7 +52,7 @@ class App extends Component {
         return(
           <div>
             <Header
-            toBookMark = {this.toBookMark}
+            toBookmark = {this.toBookmark}
             toHome = {this.toHome}
             toSearchPage = {this.toSearchPage}
             />
@@ -63,7 +63,7 @@ class App extends Component {
         return (
           <div>
             <Header
-            toBookMark = {this.toBookMark}
+            toBookmark = {this.toBookmark}
             toHome = {this.toHome}
             toSearchPage = {this.toSearchPage}
             />
@@ -75,7 +75,7 @@ class App extends Component {
         return (
           <div>
             <Header
-            toBookMark = {this.toBookMark}
+            toBookmark = {this.toBookmark}
             toHome = {this.toHome}
             toSearchPage = {this.toSearchPage}
             />
