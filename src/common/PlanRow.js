@@ -20,7 +20,7 @@ class PlanRow extends Component {
   }
 
 
-  render(){
+  render() {
     return(
       <div>
         <div style={{
