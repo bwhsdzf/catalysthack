@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { withStyles } from '@material-ui/core/styles';
+// import { withStyles } from '@material-ui/core/styles';
 
 import Avatar from './Avatar';
 import Rating from './Rating';
 import ReviewTxt from './ReviewTxt';
 import HelpfulButton from './HelpfulButton';
 
-class ReviewCell extends React.Component {
+class ReviewCell extends Component {
   render() {
     const {
       name,

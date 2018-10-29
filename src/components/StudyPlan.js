@@ -3,7 +3,7 @@ import autoBind from 'auto-bind';
 import Grid from '@material-ui/core/Grid';
 import PlanRow from '../common/PlanRow';
 import Button from '@material-ui/core/Button';
-import { Panel, Row, Col } from 'react-bootstrap';
+import { Panel, Row } from 'react-bootstrap';
 
 let existSubject1 = ["major","major","elective","breadth"];
 let existSubject2 = ["major"];
@@ -23,7 +23,7 @@ class Studyplan extends Component {
       let nR = []
       let m = this.state.n;
       console.log(m);
-      
+
       for (let i = 0; i < newRows.length; i += 1) {
         nR.push(newRows[i]);
       }
@@ -33,7 +33,7 @@ class Studyplan extends Component {
       m = m + 1;
       this.setState({ n: m });
     }
-    
+
     render() {
       return (
         <div>
@@ -54,14 +54,14 @@ class Studyplan extends Component {
             justify={"space-around"}
           >
           <div>
-              <PlanRow 
+              <PlanRow
                 toSubject = {this.props.toSubject}
                 toSearchPage = {this.props.toSearchPage}
                 handleAddRow={this.handleAddRow}
                 subjects = {existSubject1}/>
           </div>
           <div>
-              <PlanRow 
+              <PlanRow
                 toSubject = {this.props.toSubject}
                 toSearchPage = {this.props.toSearchPage}
                 handleAddRow={this.handleAddRow}
@@ -69,7 +69,7 @@ class Studyplan extends Component {
           </div>
           {this.state.rows.map(value => (
             <div>
-              <PlanRow 
+              <PlanRow
                 toSubject = {this.props.toSubject}
                 toSearchPage = {this.props.toSearchPage}
                 handleAddRow={this.handleAddRow}

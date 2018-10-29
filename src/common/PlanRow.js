@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import autoBind from 'auto-bind';
 import PropTypes from 'prop-types';
-import Grid from '@material-ui/core/Grid';
+// import Grid from '@material-ui/core/Grid';
 import PlanSubject from './PlanSubject';
 import Button from '@material-ui/core/Button';
 
@@ -28,7 +28,7 @@ class PlanRow extends Component {
             display: 'flex',
           }}>
           <div style={{ padding: 20 }}>
-              Semester: 
+              Semester:
           </div>
           {this.state.subjects.map(value => (
             <div style={{ padding: 6 }}>

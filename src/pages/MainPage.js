@@ -10,7 +10,7 @@ class MainPage extends Component {
     super(props);
     autoBind(this);
   }
-  
+
 
   render() {
       return (
@@ -18,18 +18,18 @@ class MainPage extends Component {
             display: 'flex',
             padding: 30
         }}>
-            <StudyPlan 
+            <StudyPlan
             toSubject = {this.props.toSubject}
             toSearchPage = {this.props.toSearchPage}/>
             <div>
-            <ListDivider root = 'root' 
+            <ListDivider root = 'root'
             toSubject = {this.props.toSubject}
             title = {"Recommendation for today"}
             op1 = {"Recommend Subject 1"}
             op2 = {"Recommend Subject 2"}
             op3 = {"Recommend Subject 3"}
             op4 = {"Recommend Subject 4"}/>
-            <ListDivider root = 'root' 
+            <ListDivider root = 'root'
             toSubject = {this.props.toSubject}
             title = {"Bookmarks"}
             op1 = {"Bookmarked Subject 1"}
@@ -41,5 +41,9 @@ class MainPage extends Component {
         );
   }
 }
+
+MainPage.propTypes = {
+  toSubject: PropTypes.func.isRequired,
+};
 
 export default MainPage;

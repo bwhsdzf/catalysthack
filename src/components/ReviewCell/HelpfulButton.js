@@ -1,5 +1,4 @@
 import React from 'react'
-import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button'
 import ThumbUp from '@material-ui/icons/ThumbUp';
 import ThumbDown from '@material-ui/icons/ThumbDown'
