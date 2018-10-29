@@ -30,20 +30,20 @@ class PlanRow extends Component {
           <div style={{ padding: 20 }}>
               Semester:
           </div>
-          {this.state.subjects.map(value => (
-            <div style={{ padding: 6 }}>
+          {this.state.subjects.map((value, index) => (
+            <div style={{ padding: 6 }} key={index}>
               <PlanSubject major = {value}
               toSubject = {this.props.toSubject}
               />
             </div>
-            ))}
-            <div style={{ padding: 10 }}>
-              <Button variant="contained" color="primary"
-              onClick = {this.props.toSearchPage}>
-                Add New
-              </Button>
-            </div>
+          ))}
+          <div style={{ padding: 10 }}>
+            <Button variant="contained" color="primary"
+            onClick = {this.props.toSearchPage}>
+              Add New
+            </Button>
           </div>
+        </div>
       </div>
     )
   }

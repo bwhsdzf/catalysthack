@@ -68,7 +68,7 @@ class Studyplan extends Component {
                 subjects = {existSubject2}/>
           </div>
           {this.state.rows.map(value => (
-            <div>
+            <div key={value}>
               <PlanRow
                 toSubject = {this.props.toSubject}
                 toSearchPage = {this.props.toSearchPage}
