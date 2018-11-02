@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import autoBind from 'auto-bind';
-import Typography from '@material-ui/core/Typography';
 import SubjectSearchForm from '../components/searchComponents/subjectSearchForm';
 
 
@@ -9,14 +8,14 @@ class SearchPage extends Component {
     super(props);
     autoBind(this);
   }
-  
+
 
   render() {
       return (
         <div style = {{
             padding: 30
         }}>
-        <SubjectSearchForm 
+        <SubjectSearchForm
         toSubject = {this.props.toSubject}/>
         </div>
         );

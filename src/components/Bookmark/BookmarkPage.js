@@ -10,7 +10,7 @@ class BookmarkPage extends React.Component {
         super(props);
         this.state = {
             bookmarkList: [
-                "Algorithm and Data Structure", 
+                "Algorithm and Data Structure",
                 'Models of Computation'
             ]
         }
@@ -39,6 +39,7 @@ class BookmarkPage extends React.Component {
                             text ={item}
                             handleRemove={this.handleRemove}
                             index={index}
+                            key={index}
                         />
                     ))}
                 </div>

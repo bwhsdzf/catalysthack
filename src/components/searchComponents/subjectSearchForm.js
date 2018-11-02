@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import TextField from '@material-ui/core/TextField';
 
 import Button from '@material-ui/core/Button';
 
@@ -97,7 +96,8 @@ class SubjectSearchForm extends Component {
     // Filter by subject level
     if (level && level !== "") {
       filtered = filtered.filter((subject) => {
-        return subject.subjectCode[4] == level;
+        // The fifth character in the code is always the level
+        return subject.subjectCode[4] === level;
       });
     }
     // Filter by availability

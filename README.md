@@ -1,3 +1,4 @@
 ## Catalyst hack project
-This project is created for 2018 Catalyst hack. Build by Create React App.
-To run the project, run 'npm start' from command line.
+This project was created for the 2018 Catalyst Hackathon. Built by Create React App.
+
+To start the development server, run `yarn start` from the command line.

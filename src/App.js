@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './components/Header';
+import Header from './components/header';
 import MainPage from './pages/MainPage';
 import SubjectPage from './pages/SubjectPage';
 import SearchPage from './pages/SearchPage';
@@ -21,7 +21,7 @@ class App extends Component {
     this.setState({page : 'search'});
   }
 
-  toBookMark(){
+  toBookmark() {
     this.setState({page : 'bookmark'});
   }
 
@@ -38,12 +38,12 @@ class App extends Component {
       case 'main':
       return (
         <div>
-        <Header 
-        toBookMark = {this.toBookMark}
+        <Header
+        toBookmark = {this.toBookmark}
         toHome = {this.toHome}
         toSearchPage = {this.toSearchPage}
         />
-        <MainPage 
+        <MainPage
         toSubject = {this.toSubject}
         toSearchPage = {this.toSearchPage}/>
         </div>
@@ -51,8 +51,8 @@ class App extends Component {
       case 'subject':
         return(
           <div>
-            <Header 
-            toBookMark = {this.toBookMark}
+            <Header
+            toBookmark = {this.toBookmark}
             toHome = {this.toHome}
             toSearchPage = {this.toSearchPage}
             />
@@ -62,20 +62,20 @@ class App extends Component {
       case 'search':
         return (
           <div>
-            <Header 
-            toBookMark = {this.toBookMark}
+            <Header
+            toBookmark = {this.toBookmark}
             toHome = {this.toHome}
             toSearchPage = {this.toSearchPage}
             />
-            <SearchPage 
+            <SearchPage
             toSubject = {this.toSubject}/>
           </div>
         );
         case 'bookmark':
         return (
           <div>
-            <Header 
-            toBookMark = {this.toBookMark}
+            <Header
+            toBookmark = {this.toBookmark}
             toHome = {this.toHome}
             toSearchPage = {this.toSearchPage}
             />

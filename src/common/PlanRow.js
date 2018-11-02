@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import autoBind from 'auto-bind';
 import PropTypes from 'prop-types';
-import Grid from '@material-ui/core/Grid';
+// import Grid from '@material-ui/core/Grid';
 import PlanSubject from './PlanSubject';
 import Button from '@material-ui/core/Button';
 
@@ -20,7 +20,7 @@ class PlanRow extends Component {
   }
 
 
-  render(){
+  render() {
     return(
       <div>
         <div style={{
@@ -28,22 +28,22 @@ class PlanRow extends Component {
             display: 'flex',
           }}>
           <div style={{ padding: 20 }}>
-              Semester: 
+              Semester:
           </div>
-          {this.state.subjects.map(value => (
-            <div style={{ padding: 6 }}>
+          {this.state.subjects.map((value, index) => (
+            <div style={{ padding: 6 }} key={index}>
               <PlanSubject major = {value}
               toSubject = {this.props.toSubject}
               />
             </div>
-            ))}
-            <div style={{ padding: 10 }}>
-              <Button variant="contained" color="primary"
-              onClick = {this.props.toSearchPage}>
-                Add New
-              </Button>
-            </div>
+          ))}
+          <div style={{ padding: 10 }}>
+            <Button variant="contained" color="primary"
+            onClick = {this.props.toSearchPage}>
+              Add New
+            </Button>
           </div>
+        </div>
       </div>
     )
   }
